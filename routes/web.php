@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home.home');
 });
+
+Route::get('/tasks', 'TaskController@index');
+Route::get('/task', 'TaskController@store');
+Route::get('/task/{task}', 'TaskController@destroy');
